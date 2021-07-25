@@ -139,6 +139,11 @@ footer a:hover {
 
 
 /* Background Images */
+
+.landscape{
+    padding-bottom:60%;
+}
+
 .bg-image {
     background-color: rgb(240,240,240); 
     background-size: cover; 

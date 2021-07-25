@@ -3,23 +3,23 @@ layout: default
 ---
 
 <section class='padded bg-green grid'>
-    <div class='col-7'>
+    <div class='col-9 padded-b light-text'>
         <h2>We design & create but if you have a design of your own, let us know!</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique nostrum mollitia modi magnam at quae exercitationem dolorem dolor aliquid assumenda incidunt nulla iusto iure repellendus repellat ad iste, dolorum sapiente.</p>
     </div>
 
     {% for project in site.projects %}
 
-    <div class='col-6'>
-        <div class='bg-image landscape' style="background-image: url('{{project.featured_image}}')"></div>
+    <div class='col-6_sm-12-middle'>
+        <div class='bg-image landscape' style="background-image:url('{{project.featured_image}}')"></div>
     </div>
 
-    <div class='col-6'>
+    <div class='col-6_sm-12-middle padded-2'>
         <h3> {{project.title}} </h3>
         <p> {{project.description}} </p>
-        <p> {{project.design-by}} </p>
-        <p> {{project.build-by}} </p>
-        <a href="{{project.live-url}}" class='button'>Visit Website</a>
+        <p> <strong>Design by:</strong> {{project.design-by}} </p>
+        <p> <strong>Build by: </strong> {{project.build-by}} </p>
+        <a href="{{project.live-url}}" class='button' target='_blank'>Visit Website</a>
     </div>
 
 
