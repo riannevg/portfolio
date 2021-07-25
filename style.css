@@ -136,10 +136,15 @@ footer a:hover {
     background-position: 50% 43%;
 }
 
+.bg-position-bottom{
+    background-position: bottom;
+}
+
 .bg-plant-2 {
     background-image: url('/images/plant-2.jpg');
     background-position: 75% 50%;
 }
+
 .bg-workspace {
     background-image: url('/images/workspace.jpg');
 }

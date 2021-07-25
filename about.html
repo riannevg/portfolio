@@ -1,0 +1,54 @@
+---
+layout: default
+team:
+  - name: Greg
+    bio: Big Boss Coder
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sed similique, architecto facere doloribus molestiae.
+    profile_image: 
+  - name: Jane
+    bio: Big Boss Designer
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sed similique, architecto facere doloribus molestiae.
+    profile_image: 
+  - name: Greg
+    bio: Big Boss Coder
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sed similique, architecto facere doloribus molestiae.
+    profile_image: 
+---
+
+
+<!-------------------------------------- Main banner section -------------------------------------->
+<section class='grid bg-green'>
+
+    <div class='col-5-middle padded light-text editable'>
+        <h2 class='editable'>Meet our growing family</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, sit. Itaque quas autem expedita quam labore nemo recusandae atque, deleniti quasi cumque, porro soluta quidem voluptas magnam beatae iure velit?</p>
+    </div>
+
+    <div class='col-7 bg-image bg-plant-1 bg-position-bottom tall-60'></div>
+
+</section>
+
+
+<!-------------------------------------- Team Members section -------------------------------------->
+
+<section class='padded'>
+
+{% for item in page.team %}
+
+    <div class='grid'>
+        <div class='col-5'>
+            <img src="{{ item.profile_image }}">
+        </div>
+        
+        <div class='col-7'>
+            <h3> {{ item.name }} </h3>
+            <h4> {{ item.bio }} </h4>
+            <p> {{ item.description }} </p>
+        </div>
+    </div>
+
+
+
+{% enfor %}
+
+</section>
