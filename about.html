@@ -1,18 +1,20 @@
 ---
 layout: default
+banner_image: /images/plant-1.jpg
 team:
   - name: Greg
     bio: Big Boss Coder
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sed similique, architecto facere doloribus molestiae.
-    profile_image: 
+    profile_image: /images/profile-1.jpg
   - name: Jane
     bio: Big Boss Designer
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sed similique, architecto facere doloribus molestiae.
-    profile_image: 
-  - name: Greg
-    bio: Big Boss Coder
+    profile_image: /images/profile-3.jpg
+  - name: Johny
+    bio: Designer
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sed similique, architecto facere doloribus molestiae.
-    profile_image: 
+    profile_image: /images/profile-2.jpg
+about-video-id: _O2_nTt1N6w
 ---
 
 
@@ -24,7 +26,7 @@ team:
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, sit. Itaque quas autem expedita quam labore nemo recusandae atque, deleniti quasi cumque, porro soluta quidem voluptas magnam beatae iure velit?</p>
     </div>
 
-    <div class='col-7 bg-image bg-plant-1 bg-position-bottom tall-60'></div>
+    <div class='col-7 bg-image bg-position-bottom tall-60' style="background-image: url('{{page.banner_image}}');"></div>
 
 </section>
 
@@ -32,23 +34,32 @@ team:
 <!-------------------------------------- Team Members section -------------------------------------->
 
 <section class='padded'>
+    <div class='capped-width-narrow'>
+    {% for item in page.team %}
 
-{% for item in page.team %}
-
-    <div class='grid'>
-        <div class='col-5'>
-            <img src="{{ item.profile_image }}">
+    <div class='grid flex-flip-alternate padded-1'>
+        <div class='col-5 padded-1'>
+            <img src="{{ item.profile_image }}" class='team-image'>
         </div>
-        
-        <div class='col-7'>
-            <h3> {{ item.name }} </h3>
+
+        <div class='col-7-middle padded-1'>
+            <h3> Meet {{ item.name }} </h3>
             <h4> {{ item.bio }} </h4>
             <p> {{ item.description }} </p>
         </div>
     </div>
 
+    {% endfor %}
+    </div>  
+</section>
 
+<!-------------------------------------- Meet the team video-------------------------------------->
 
-{% enfor %}
-
+<section class='padded bg-green light-text center'>
+    <h2 class='editable'> Watch our meet the team video</h2>
+    <p class='editable'>Feat. J Bomb the terrier</p>
+    <div class='padded'>
+        <!-- To embed a video responsively, first on youtube copy link, goto page embed responsively to fix code -->
+        <div class='embed-container'><iframe src='https://www.youtube.com/embed//{{ page.about-video-id }}' frameborder='0' allowfullscreen></iframe></div>
+    </div>  
 </section>
