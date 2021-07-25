@@ -155,7 +155,13 @@ footer a:hover {
 
     .center-sm { text-align: center; }
 
-    .flex-flip-sm { flex-direction: column-reverse; }
+   
+/* Very pro selector to flip grids, regular flipping isnt working.  */
+        [class*="grid"].flex-flip-sm {
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+
 
     .bg-plant-1 {
         background-image: url('/images/plant-1-light.png');
