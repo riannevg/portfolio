@@ -111,6 +111,15 @@ a:hover { color: #a2745c; }
   color: white;
 }
 
+.button-light {
+    text-decoration: none;
+    border: 2px solid; 
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    font-weight: 400;
+    color: black;
+  }
+
 .bg-dark .button:hover ,
 .bg-dark a:hover{
     color: #d3b4a2;
