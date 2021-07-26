@@ -33,6 +33,9 @@ html{
 .padded-b-0 { padding-bottom: 0; }
 .margin-b-0 { margin-bottom: 0; }
 
+.margin-b-1 {margin-bottom:1rem;}
+.margin-b-2 {margin-bottom:2rem;}}
+
 .bg-rust  { background-color: #d3b4a2; }
 .bg-green { background-color: #9b9b81; }
 .bg-dark  { background-color: #a2745c; }
@@ -123,7 +126,7 @@ a:hover { color: #a2745c; }
 
 /* Header & Footer  */
 
-.logo{
+header a{
     text-decoration:none;
 }
 
