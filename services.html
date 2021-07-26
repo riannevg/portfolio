@@ -1,4 +1,73 @@
 ---
 layout: default
+features:
+  - title: Beautiful designs
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aliquid saepe fugiat vero unde praesentium ipsam! Iure veniam a ab? Ullam, provident? Recusandae blanditiis cum porro labore consequuntur, pariatur dolorum!
+    featured_image: /images/placeholder-project.png
+  - title: So very quick 
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aliquid saepe fugiat vero unde praesentium ipsam! Iure veniam a ab? Ullam, provident? Recusandae blanditiis cum porro labore consequuntur, pariatur dolorum!
+    featured_image: /images/placeholder-project.png
+  - title: Simply  the best
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aliquid saepe fugiat vero unde praesentium ipsam! Iure veniam a ab? Ullam, provident? Recusandae blanditiis cum porro labore consequuntur, pariatur dolorum!
+    featured_image: /images/placeholder-project.png
 ---
 
+<!-------------------------------------- Main banner section -------------------------------------->
+<section class='grid-middle-right padded bg-image bg-plant-2 tall-70'>
+
+
+    <div class='col-7'>
+        <h2 class='editable'> Our Services</h2>
+        <p class= 'editable'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, sit. Itaque quas autem expedita quam labore nemo recusandae atque, deleniti quasi cumque, porro soluta quidem voluptas magnam beatae iure velit?</p>
+    </div>
+
+</section>
+
+
+<!-------------------------------------- Services Section -------------------------------------->
+<section class='grid-spaceAround icon-section padded bg-green center'>
+    
+    <div class='col-3_xs-12'>
+        <h3 class='editable'>Design</h3>
+        <p class='editable light-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquam, voluptate iste tenetur delectus suscipit eos exercitationem. </p>
+    </div>
+
+    <div class='col-3_xs-12'>
+        <h3 class='editable'>Build</h3>
+        <p class='editable light-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquam, voluptate iste tenetur delectus suscipit eos exercitationem. </p>
+    </div>
+
+    <div class='col-3_xs-12'>
+        <h3 class='editable'>Design & Build</h3>
+        <p class='editable light-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquam, voluptate iste tenetur delectus suscipit eos exercitationem. </p>
+    </div>
+
+    <div class='col-12 padded-1'>
+        <a href='/contact.html' class='button'>Get in touch</a>
+    </div>
+</section>
+
+<!-------------------------------------- Call to action for newsletter -------------------------------------->
+
+{% include newsletter-signup.html %}
+
+<!-------------------------------------- Designs section-------------------------------------->
+<section class='capped-width'>
+    
+    {% for item in page.features %}
+
+    <div class='grid flex-flip-alternate'>
+
+        <div class='col-5_sm-12-middle padded'>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+        </div>
+                    
+        <div class='col-7_sm-12 padded'>
+            <div class='bg-image tall-50' style="background-image:url('{{item.featured_image}}')"></div>
+        </div>
+            
+    </div>
+
+    {% endfor %}
+</section>
